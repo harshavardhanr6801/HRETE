@@ -1,4 +1,4 @@
-package com.hrms.hrete.shared;
+package com.hrms.hrete.shared.entity;
 
 import java.io.Serializable;
 import java.time.Instant;
@@ -16,14 +16,17 @@ import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.Version;
+import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
 @SuperBuilder
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Setter
 public abstract class BaseAuditingEntity implements Serializable {
