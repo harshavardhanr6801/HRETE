@@ -2,6 +2,10 @@
 .vscode
 .idea
 
+# Personal Claude Code preferences (local workflow, not shared)
+.claude/skills/api-pseudocode/
+CLAUDE.local.md
+
 HELP.md
 target/
 .mvn/wrapper/maven-wrapper.jar
